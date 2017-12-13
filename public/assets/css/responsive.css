@@ -1,0 +1,339 @@
+/*===========================================
+Tablet Layout: 768px.
+============================================*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-menu li > a,
+    .cart-login li > a {
+        padding: 40px 14px;
+    }
+    .logo {
+        padding: 28px 0 25px;
+        width: 140px;
+    }
+    .product-meta > ul > li {
+        margin: 0 30px 0 0;
+    }
+    .hero-title {
+        font-size: 34px;
+    }
+    .single-feature {
+        margin-bottom: 60px;
+    }
+    .feature-area.section-padding {
+        padding: 100px 0 40px;
+    }
+    .service-details {
+        padding: 90px 50px;
+    }
+    .single-quote > p {
+        max-width: 500px;
+    }
+    .client-area .owl-controls .owl-buttons div {
+        left: -10px;
+    }
+    .client-area .owl-buttons div.owl-next {
+        right: -10px;
+        left: auto;
+    }
+    .single-quote{
+        max-width: 465px;
+    }
+    .blog-area {
+        padding: 100px 0 70px;
+    }
+    .single-blog {
+        height: 425px;
+        margin-bottom: 30px;
+    }
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+    .footer-top {
+        padding: 60px 0 30px;
+    }
+    .footer-social li {
+        margin-left: 2px;
+        padding: 3px 12px;
+    }
+    .footer-social a i {
+        margin-right: 5px;
+    }
+    .comming-countown .table-cell {
+        margin-right: 20px;
+    }
+    .ab-feature-area.section-padding {
+        padding: 100px 0 25px;
+    }
+    .search-box > input {
+        width: 89%;
+    }
+    .sidebar {
+        margin-top: 60px;
+    }
+    .related-product .owl-theme .owl-controls .owl-buttons div.owl-prev {
+        left: 85%;
+    }
+    .related-product .owl-theme .owl-controls .owl-buttons div.owl-next {
+        right: 20px;
+    }
+    .register-wrap {
+        margin-top: 30px;
+    }
+}
+/*=======================================
+Mobile Layout: 320px.
+=========================================*/
+
+@media only screen and (max-width: 767px) {
+    .main-menu-area {
+        display: none;
+    }
+    .mobile-menu-area {
+        display: block;
+    }
+    .main-menu li > a,
+    .cart-login li > a {
+        padding: 40px 5px;
+    }
+    .hero-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .hero-intro {
+        padding: 0 15px;
+    }
+    .product-meta > ul > li {
+        margin: 0 12px 0 0;
+    }
+    .hero-wrap {
+        padding: 100px 0;
+    }
+    .single-feature {
+        margin-bottom: 60px;
+    }
+    .feature-area.section-padding {
+        padding: 100px 0 40px;
+    }
+    .service-heading {
+        line-height: 1;
+    }
+    .owl-controls {
+        opacity: 0;
+    }
+    .blog-heading > h2 {
+        font-size: 35px;
+    }
+    .blog-area {
+        padding: 100px 0 70px;
+    }
+    .single-blog {
+        margin-bottom: 30px;
+    }
+    .subscribe-form > button {
+        font-size: 16px;
+        padding: 12.5px 15px;
+    }
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+    .footer-top {
+        padding: 60px 0 30px;
+    }
+    .footer-social li {
+        float: left;
+        margin: 5px;
+        padding: 3px 16px;
+    }
+    .product-link > a {
+        margin: 0;
+    }
+    .footer-social a i {
+        margin-right: 5px;
+    }
+    .coming-wrap h2 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .comming-countown .table-cell {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .coming-form {
+        max-width: 300px;
+    }
+    .comming-soon-area .ztheme-btn {
+        padding: 17px 10px;
+        font-size: 16px;
+    }
+    .error {
+        font-size: 165px;
+    }
+    .error-heading {
+        font-size: 20px;
+    }
+    .contact-wrap {
+        padding: 50px 0 0
+    }
+    .promo-p-txt > h2 {
+        line-height: 40px;
+    }
+    .about-wrap-thumb {
+        padding-top: 45px;
+    }
+    .team-area .section-title {
+        font-size: 30px;
+    }
+    .ab-feature-area .section-title {
+        font-size: 29px;
+    }
+    .member-thumb {
+        float: none;
+        width: 100%;
+    }
+    .member-details {
+        margin-left: 20px;
+    }
+    .ab-feature-area.section-padding {
+        padding: 100px 0 25px;
+    }
+    .content-area {
+        overflow: hidden
+    }
+    .thubm-caption {
+        font-size: 38px;
+    }
+    .s-blog-details {
+        padding: 30px 15px;
+    }
+    .post-social.pull-right {
+        padding-top: 30px;
+    }
+    .post-social li {
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    .post-social li::after {
+        left: -15px
+    }
+    .overly-bg > img {
+        height: 355px;
+    }
+    .pager > a,
+    .pager span {
+        height: 30px;
+        line-height: 30px;
+        width: 30px;
+    }
+    .sidebar {
+        margin-top: 60px;
+    }
+    .search-box > input {
+        width: 82%;
+    }
+    .article-s-list li {
+        margin: 5px;
+    }
+    .comment-thumb {
+        float: none;
+        margin-bottom: 20px;
+    }
+    .comment-txt {
+        margin-left: 0px;
+    }
+    .s-article-details img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .p-demo-btn {
+        float: none;
+        margin-bottom: 26px;
+    }
+    .p-demo-social li {
+        margin: 5px;
+    }
+    .related-product .owl-controls .owl-buttons {
+        display: none;
+    }
+    .client-area {
+        overflow: hidden
+    }
+    .checkbox .form-group.half {
+        width: 100%;
+    }
+    .checkbox {
+        margin-top: 30px;
+    }
+    .payment-checkbox > input {
+        margin-bottom: 0;
+    }
+    .single-cart-remove,
+    .cart-product,
+    .single-cart-product {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .cart-calculate {
+        padding: 15px 10px 5px;
+    }
+    .place-order {
+        margin-top: 30px;
+    }
+}
+/*================================
+Wide Mobile Layout: 480px.
+==================================*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .blog-heading > h2 {
+        font-size: 42px;
+    }
+    .product-meta > ul > li {
+        margin: 0 62px 0 0;
+    }
+    .product-link > a {
+        margin: 0 5px;
+    }
+    .single-blog img {
+        height: 245px;
+    }
+    .subscribe-form > button {
+        padding: 12.5px 40px;
+        font-size: 18px;
+    }
+    .single-quote {
+        max-width: 430px;
+    }
+    .single-feature > p {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+    .comming-countown .table-cell {
+        margin-right: 30px;
+    }
+    .comming-countown .table-cell:last-child {
+        margin-right: 30px;
+    }
+    .coming-form {
+        max-width: 450px;
+    }
+    .comming-soon-area .ztheme-btn {
+        padding: 17px 30px;
+        font-size: 18px;
+    }
+    .error {
+        font-size: 265px;
+    }
+    .error-heading {
+        font-size: 30px;
+    }
+    .post-social.pull-right {
+        padding-top: 0;
+    }
+    .pager > a,
+    .pager span {
+        height: 45px;
+        line-height: 45px;
+        width: 45px;
+    }
+}
