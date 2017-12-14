@@ -35,9 +35,8 @@
                         <div class="form-wrap clearfix">
                             <h2 class="form-title">User informations Form</h2>
                             <div class="col-sm-6 col-sm-offset-3">
-                                <form id="signUpForm" name="signUpForm" data-toggle="validator" class="signUpForm"  enctype="multipart/form-data">
+                                <form action="{{ url('/store') }}" id="signUpForm" name="signUpForm" data-toggle="validator" class="signUpForm"  enctype="multipart/form-data">
                                     <div class="signUpForm-step-holder">
-
                                         <div id="section-1" class="signUpForm-step-wrap">
                                             <h3 class="section-title">Step 1 of 4</h3>
                                             <fieldset>
@@ -141,7 +140,7 @@
                                                 </div>
                                                 <h3 class="section-form-title">Personal Information</h3>
                                                 <div class="help-block with-errors mandatory-error"></div>
-
+                                                <form action="{{ url('/store"') }}" method="POST" id="postForm" enctype="multipart/form-data">
                                                 <div class="form-group validfname">
                                                     <input class="form-control" name="fname" id="fname" type="text" placeholder="First Name*" required data-error="Please enter First Name">
                                                     <div class="input-group-icon"><i class="fa fa-user"></i></div>
@@ -357,7 +356,9 @@
                                                         <div id="mgsFormSubmit" class="hidden"></div>
                                                         <div id="final-step-buttons" class="form-group  signUpForm-step-4">
                                                             <button class="btn btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button>
-                                                            <button id="Submit" class="btn btn-custom pull-right" type="submit">Submit </button>
+                                                            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                                                            <input id="Submit" type="submit" value="বিজ্ঞাপন পোস্ট করুন" class="btn-success btn pic_up">
+                                                            {{--<button id="Submit" class="btn btn-custom pull-right" type="submit">Submit </button>--}}
                                                         </div>
                                                     </div>
                                                 </div>

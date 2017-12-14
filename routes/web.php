@@ -44,3 +44,4 @@ Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('adm
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 Route::post('/admin/store', 'AdminController@store');
 Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
+Route::get('/store', 'AjaxController@store');

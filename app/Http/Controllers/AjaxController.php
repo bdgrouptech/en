@@ -1,53 +1,51 @@
 <?php
-//
-//namespace App\Http\Controllers;
-//
-//use App\Blog;
-//use App\category;
-//use App\newspost;
-//use App\termtaxomony;
-//use App\widget;
-//use Illuminate\Http\Request;
-//use Illuminate\Http\RedirectResponse;
-//use Illuminate\Http\Response;
-//use Illuminate\Support\Facades\DB;
-//
-//
-//class AjaxController extends Controller
-//{
-//    /**
-//     * Display a listing of the resource.
-//     *
-//     * @return \Illuminate\Http\Response
-//     */
-//    public function store(Request $request)
-//    {
-////		$arra=['hsd'];
-////		echo json_encode($arra);
-//		$data  = $request->input( 'data' );
-//		$name = $data['name'];
-//		$slug = $data['slug'];
-//		$parent = $data['parent'];
-//		$dsc = $data['dsc'];
-//		$reg = [
-//		'name' => $data['name'],
-//		'slug' => $data['slug'],
-//		'parent' => $data['parent'],
-//		'dsc' => $data['dsc'],
-//		];
-//        $resucc =  category::create($reg);
-//        if($resucc){
-//            return ['status' => 'success',];
-//        }else{
-//            return ['status' => 'error'];
-//        }
-//    }
-//
-//    /**
-//     * Show the form for creating a new resource.
-//     *
-//     * @return \Illuminate\Http\Response
-//     */
+
+namespace App\Http\Controllers;
+
+
+
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
+
+
+class AjaxController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        dd($request->all());
+//		$arra=['hsd'];
+//		echo json_encode($arra);
+		$data  = $request->input( 'data' );
+		$name = $data['name'];
+		$slug = $data['slug'];
+		$parent = $data['parent'];
+		$dsc = $data['dsc'];
+		$reg = [
+		'name' => $data['name'],
+		'slug' => $data['slug'],
+		'parent' => $data['parent'],
+		'dsc' => $data['dsc'],
+		];
+        $resucc =  category::create($reg);
+        if($resucc){
+            return ['status' => 'success',];
+        }else{
+            return ['status' => 'error'];
+        }
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
 //    public function editcat(Request $request)
 //    {
 ////        		$arra=['hsd'];
@@ -242,4 +240,4 @@
 //            return ['status' => 'error'];
 //        }
 //    }
-//}
+}
