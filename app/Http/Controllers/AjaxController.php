@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 
 
+use App\Userinfo;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class AjaxController extends Controller
@@ -19,26 +21,16 @@ class AjaxController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
-//		$arra=['hsd'];
-//		echo json_encode($arra);
-		$data  = $request->input( 'data' );
-		$name = $data['name'];
-		$slug = $data['slug'];
-		$parent = $data['parent'];
-		$dsc = $data['dsc'];
-		$reg = [
-		'name' => $data['name'],
-		'slug' => $data['slug'],
-		'parent' => $data['parent'],
-		'dsc' => $data['dsc'],
-		];
-        $resucc =  category::create($reg);
-        if($resucc){
-            return ['status' => 'success',];
-        }else{
-            return ['status' => 'error'];
-        }
+		$bata=$request->all();
+		//dd($data);
+        $id=Auth::user()->id;
+        $data=[
+           'id'=> $id,
+            'bata'=>$bata,
+        ];
+			$userinfo=Userinfo::create($data);
+
+		return view('useradmin.admin',$userinfo);
     }
 
     /**

@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 use App\Publicreg;
 
 use App\User;
+use App\Userinfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -26,13 +28,30 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        //dd($userinfo);
+
         $id = Auth::user()->id;
         $user = User::find($id);
-       //dd($user);
-        $data=[
-            'user'=>$user,
+        //dd($user);
+        $data = [
+            'user' => $user,
         ];
-        return view('useradmin.index',$data);
+        $userinfo = Userinfo::find($id);
+//dd($userinfo);
+        if($userinfo){
+            return view('useradmin.admin');
+        }
+        else{
+            return view('useradmin.index', $data);
+        }
+
+
+
+
+
+//             return view('useradmin.index',$userinfo);
+
     }
     public function userregister($data)
     {

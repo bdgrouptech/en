@@ -19,6 +19,24 @@ class ProductsController extends Controller
     {
         return view('product');
     }
+    public function adpost()
+    {
+        return view('useradmin.adpost');
+    }
+
+
+    public function post_store(Request $request)
+    {
+        $data=$request->all();
+        dd($data);
+
+
+    }
+
+
+
+
+
     public function productsdetails()
     {
         return view('productsdetails');

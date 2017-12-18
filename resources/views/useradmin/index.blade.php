@@ -35,7 +35,7 @@
                         <div class="form-wrap clearfix">
                             <h2 class="form-title">User informations Form</h2>
                             <div class="col-sm-6 col-sm-offset-3">
-                                <form action="{{ url('/store') }}" id="signUpForm" name="signUpForm" data-toggle="validator" class="signUpForm"  enctype="multipart/form-data">
+                                <form action="{{ url('/store') }}" name="signUpForm"   enctype="multipart/form-data">
                                     <div class="signUpForm-step-holder">
                                         <div id="section-1" class="signUpForm-step-wrap">
                                             <h3 class="section-title">Step 1 of 4</h3>
@@ -250,7 +250,7 @@
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                                 <div class="form-group validcardnumber">
-                                                    <input class="form-control" value="***********************" name="cardnumber" id="cardnumber" type="text" pattern="\d*" placeholder="Card Number*" required data-error="Please enter valid card number">
+                                                    <input class="form-control" value="1234567895421368" name="cardnumber" id="cardnumber" type="text" pattern="\d*" placeholder="Card Number*" required data-error="Please enter valid card number">
                                                     <div class="input-group-icon"><i class="fa fa-credit-card"></i></div>
                                                     <div class="help-block with-errors"></div>
                                                 </div>

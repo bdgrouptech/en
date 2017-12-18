@@ -40,6 +40,12 @@ Route::get('/admin/add-category', 'AjaxController@store');
 Route::get('/allpost', 'UserController@');
 
 
+Route::get('/adpost', 'ProductsController@adpost');
+Route::post('/post_store', 'ProductsController@post_store');
+
+
+
+
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 Route::post('/admin/store', 'AdminController@store');

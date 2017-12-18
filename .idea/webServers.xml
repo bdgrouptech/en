@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c4bbfd84-fe61-4047-b0bf-0d271c1025f8" name="mithu" url="http://alhajtarikulhasanmithu.com/">
+        <fileTransfer host="alhajtarikulhasanmithu.com" port="21" password="dfcddfc3dfdedfc6dfcbdfc8df9adf9bdf9ddf9bdf92df9cdf9adf9cdf9ddf92df98" username="alhajtarikul">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
