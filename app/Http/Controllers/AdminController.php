@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
-use App\Jobpost;
+
 //use App\Postad;
 use App\User;
-use App\Categories;
-use App\District;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

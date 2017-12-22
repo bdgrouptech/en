@@ -48,12 +48,14 @@
 <main class="product-details">
     <div class="container">
         <div class="row">
+@foreach($data as $item)
             <div class="col-md-8 col-sm-12">
                 <!-- SINGLE PRODUCT START -->
+
                 <div class="single-product">
                     <h2 class="product-title">DotBike - Bicycle E-commerce HTML5 Template</h2>
                     <div class="s-product-thumb">
-                        <img src="images/sproduct.jpg" alt="">
+                        <img src="{{asset('uploads/'.$item->thumbnail )}}" alt="">
                     </div>
                     <div class="demo-social">
                         <div class="p-demo-btn">
@@ -259,6 +261,7 @@
                 </div>
                 <!-- SINGLE PRODUCT END -->
             </div>
+    @endforeach
             <div class="col-md-4 col-sm-12">
                 <aside class="product-sidebar">
                     <div class="product-widget">

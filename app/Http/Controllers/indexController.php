@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Product;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
@@ -16,8 +17,32 @@ class indexController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $data = Product::all();
+//       $id = $data->id;
+//      dd($data);
+
+//        $currentURL = URL::current();
+        $product=[
+            'data'=>$data,
+
+//            'id'=>$id,
+//            'title'=>$title,
+//            'currentURL'=>$currentURL,
+        ];
+        return view('index',$product);
     }
+
+    public function details()
+    {
+        $data=Product::all();
+        //dd($data);
+        $product=[
+            'data'=>$data,
+        ];
+        dd($product);
+        return view('productsdetails',$product);
+    }
+
     public function about()
     {
         return view('about');

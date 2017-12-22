@@ -1,7 +1,7 @@
 <!-- Main navbar -->
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="index.html"><h4 style="margin: 0px; padding: 0px;">World Idea School</h4></a>
+        <a class="navbar-brand" href="index.html"><h4 style="margin: 0px; padding: 0px;">Envatobd </h4></a>
 
         <ul class="nav navbar-nav visible-xs-block">
             <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>

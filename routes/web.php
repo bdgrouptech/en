@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'indexController@index')->name('index');
+Route::post('/ad/{id}/{title}', 'ProductsController@details');
 Route::get('/about', 'indexController@about')->name('about');
 Route::get('/contact', 'indexController@contact')->name('contact');
 Route::post('/submitdata','indexController@contactsubmit');
@@ -42,6 +43,7 @@ Route::get('/allpost', 'UserController@');
 
 Route::get('/adpost', 'ProductsController@adpost');
 Route::post('/post_store', 'ProductsController@post_store');
+
 
 
 

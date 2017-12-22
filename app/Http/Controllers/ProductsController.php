@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Product;
+
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class ProductsController extends Controller
 {
@@ -12,6 +16,47 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    {
+        //
+    }
+
+    /**
+     * @param Request $request
+     */
+    public function post_store(Request $request)
+    {
+        $data=$request->all();
+        //dd($data);
+        $filename = time().'file'.'.'.$request->uploadfile->getClientOriginalExtension();
+        $thumbnail = time().'thumb'.'.'.$request->thumbnail->getClientOriginalExtension();
+        $screenshort = time().'srceen'.'.'.$request->screenshort->getClientOriginalExtension();
+        $filesize = $request->uploadfile->getClientSize();
+        $thumbnaillocation='uploads/'.$filename;
+        $sreenshortlocation='uploads/'.$thumbnail;
+        $location='uploads/'.$screenshort;
+        Image::make($request->uploadfile)->save($location);
+        Image::make($request->thumbnail)->save($thumbnaillocation);
+        Image::make($request->screenshort)->save($sreenshortlocation);
+        $data['uploadfile'] = $filename;
+        $data['thumbnail'] = $thumbnail;
+        $data['screenshort'] = $screenshort;
+        $data['active']=0;
+//dd($data);
+        Product::create($data);
+//        $notification = array(
+//            'stufmessage' => 'Thank you! Your Stuff Message has been Sent Successfully.',
+//            'alert-type' => 'success'
+//        );
+//        return Redirect::to('addstuff')->with($notification);
+        //return back();
+
+        return view('useradmin.adpost');
+
+
+    }
+
+
+    public function ffghgf()
     {
         //
     }
@@ -25,13 +70,7 @@ class ProductsController extends Controller
     }
 
 
-    public function post_store(Request $request)
-    {
-        $data=$request->all();
-        dd($data);
 
-
-    }
 
 
 

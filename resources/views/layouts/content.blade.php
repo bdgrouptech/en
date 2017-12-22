@@ -22,7 +22,7 @@
                 <div class="promo-item-wrap">
                     <!-- Nav tabs -->
                     <ul class="ztheme-tab" role="tablist">
-                        <li role="presentation" class="active"><a href="#seller" aria-controls="seller" role="tab" data-toggle="tab">Best Seller</a>
+                        <li role="presentation" class="active"><a href="#seller" aria-controls="seller" role="tab" data-toggle="tab">All Products</a>
                         </li>
                         <li role="presentation"><a href="#hot" aria-controls="hot" role="tab" data-toggle="tab">HOt Offer</a>
                         </li>
@@ -37,22 +37,28 @@
                         <div role="tabpanel" class="tab-pane fade in active" id="seller">
                             <div class="row">
                                 <!-- Single Product Start -->
+                                @foreach($data as $item)
                                 <div class="col-md-4 col-sm-6">
                                     <div class="product-template">
                                         <figure>
-                                            <img src="{{asset('/assets/images/bicycle.jpg')}}" alt="">
+                                            <img src="{{asset('uploads/'.$item->thumbnail )}}" alt="">
                                             <div class="product-caption">
                                                 <div class="caption-cel">
                                                     <div class="product-link">
-                                                        <a href="{{url('/productsdetails')}}">live preview</a>
-                                                        <a href="{{url('/productsdetails')}}" class="link-green">Item details</a>
+                                                        <a href="{{$item->demourl}}" target="_blank" >live preview</a>
+{{--                                                        <a href="{{url('/productsdetails')}}" class="link-green">Item details</a>--}}
+                                                        {{--<a href="/ad/<?php echo $item->id ?>/<?php echo str_replace(array(' ', '<', '>', '&', '/', '{', '}', '*'), array(' '),$item->ptitle) ?>/" title="<?php echo str_replace(array(' ', '<', '>', '&', '/', '{', '}', '*'), array(' '),$item->ptitle)." - Invitebd"; ?>">{{ str_limit($item->ptitle,$limit = 35, $end = '') }}</a></p>--}}
+                                                        <a href="/ad/<?php echo $item->id ?>/<?php echo str_replace(array(' ', '<', '>', '&', '/', '{', '}', '*'), array(' '),$item->title) ?>/" title="<?php echo str_replace(array(' ', '<', '>', '&', '/', '{', '}', '*'), array(' '),$item->title)." - Envatobd"; ?>">{{ str_limit($item->title,$limit = 20, $end = '') }}</a>
+                                                        {{--<a class="link-green" href="/ad/<?php echo $item->id?>/<?php echo str_replace('-',' ',$item->title) ?>"></a>--}}
+
+{{--                                                        <a href="{{url('/productsdetails')}}" class="link-green">Item details</a>--}}
                                                     </div>
                                                 </div>
                                             </div>
                                         </figure>
 
                                         <div class="product-header">
-                                            <h3 class="product-name"><a href="{{url('/productsdetails')}}">DotBike - Bicycle E-commerce PSD Template</a></h3>
+                                            <h3 class="product-name"><a href="{{url('/productsdetails')}}">{{$item->title}}</a></h3>
                                                 <span class="p-category">
                                                 <a href="#">E-commerce / Creative</a>
                                             </span>
@@ -74,6 +80,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                                 <!-- Single Product End -->
 
                                 <!-- Single Product Start -->

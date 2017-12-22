@@ -1,27 +1,28 @@
-@extends('admin.master')
+@extends('useradmin.master')
 @section('head')
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-    <link href="{{asset('admin-assets/assets/css/icons/icomoon/styles.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('admin-assets/assets/css/minified/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('admin-assets/assets/css/minified/core.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('admin-assets/assets/css/minified/components.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('admin-assets/assets/css/minified/colors.min.css')}}" rel="stylesheet" type="text/css">
-    <!-- /global stylesheets -->
+        <!-- Global stylesheets -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+<link href="{{asset('admin-assets/assets/css/icons/icomoon/styles.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('admin-assets/assets/css/minified/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('admin-assets/assets/css/minified/core.min.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('admin-assets/assets/css/minified/components.min.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('admin-assets/assets/css/minified/colors.min.css')}}" rel="stylesheet" type="text/css">
+<!-- /global stylesheets -->
 
-    <!-- Core JS files -->
-    <script type="text/javascript" src="{{asset('admin-assets/assets/js/plugins/loaders/pace.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('admin-assets/assets/js/core/libraries/jquery.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('admin-assets/assets/js/core/libraries/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('admin-assets/assets/js/plugins/loaders/blockui.min.js')}}"></script>
-    <!-- /core JS files -->
+<!-- Core JS files -->
+<script type="text/javascript" src="{{asset('admin-assets/assets/js/plugins/loaders/pace.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('admin-assets/assets/js/core/libraries/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('admin-assets/assets/js/core/libraries/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('admin-assets/assets/js/plugins/loaders/blockui.min.js')}}"></script>
+<!-- /core JS files -->
 
-    <!-- Theme JS files -->
-    <script type="text/javascript" src="{{ asset('admin-assets/assets/js/plugins/uploaders/fileinput.min.js') }}"></script>
+<!-- Theme JS files -->
+<script type="text/javascript" src="{{ asset('admin-assets/assets/js/plugins/uploaders/fileinput.min.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('admin-assets/assets/js/core/app.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('admin-assets/assets/js/pages/uploader_bootstrap.js') }}"></script>
-    <!-- /theme JS files -->
-    <!-- /theme JS files -->
+<script type="text/javascript" src="{{ asset('admin-assets/assets/js/core/app.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin-assets/assets/js/pages/uploader_bootstrap.js') }}"></script>
+<!-- /theme JS files -->
+
 @endsection
 @section('header')
     @include('useradmin.header')
@@ -60,7 +61,7 @@
                     <div class="breadcrumb-line">
                         <ul class="breadcrumb">
                             <li><a href="{{url('/home')}}"><i class="icon-home2 position-left"></i> Home</a></li>
-                            <li class="active">Add New Admission</li>
+                            <li class="active">Add New Students</li>
                         </ul>
                     </div>
                 </div>
@@ -77,29 +78,72 @@
                         <div class="form-group row">
                             <label for="description" class="col-sm-2 col-form-label"><strong>Description:</strong> </label>
                             <div class="col-sm-10">
-                                <input type="text" name="description" class="form-control" id="description" placeholder="Description Here..">
+                                <textarea name="description" class="form-control" id="description" placeholder="Description Here.."></textarea>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-lg-2 control-label text-semibold">Full ScreenShoot upload:</label>
+                        <div class="form-group row">
+                            <label class="col-lg-2 control-label text-semibold"><strong> file Upload:</strong></label>
                             <div class="col-lg-10">
-                                <input type="file" name="screenshoot" class="file-input" >
+                                <input type="file" name="uploadfile" class="file-input">
                                 <span class="help-block">Automatically convert a file input to a bootstrap file input widget by setting its class as <code>file-input</code>.</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-lg-2 control-label text-semibold">upload zip File:</label>
+                        <div class="form-group row">
+                            <label class="col-lg-2 control-label text-semibold"><strong> Thumbnail Upload:</strong></label>
                             <div class="col-lg-10">
-                                <input type="file" name="zipfile" class="file-input">
+                                <input type="file" name="thumbnail" class="file-input">
                                 <span class="help-block">Automatically convert a file input to a bootstrap file input widget by setting its class as <code>file-input</code>.</span>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label class="col-lg-2 control-label text-semibold"><strong> Screenshort Upload:</strong></label>
+                            <div class="col-lg-10">
+                                <input type="file" name="screenshort" class="file-input">
+                                <span class="help-block">Automatically convert a file input to a bootstrap file input widget by setting its class as <code>file-input</code>.</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="includedfile" class="col-sm-2 col-form-label"><strong>Includedfiles:</strong> </label>
+                            <div class="col-sm-10">
+                                <input type="text" name="includedfile" class="form-control" id="includedfiles" placeholder="Title Here..">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="demourl" class="col-sm-2 col-form-label"><strong>Demourl:</strong> </label>
+                            <div class="col-sm-10">
+                                <input type="text" name="demourl" class="form-control" id="demourl" placeholder="Demo Urls Here..">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="tags" class="col-sm-2 col-form-label"><strong>Tags:</strong> </label>
+                            <div class="col-sm-10">
+                                <textarea  name="tags" class="form-control" id="tags" placeholder="Tags Here.."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="regprice" class="col-sm-2 col-form-label"><strong>Regular Price:</strong> </label>
+                            <div class="col-sm-10">
+                                <input type="number" name="regprice" class="form-control" id="regprice" placeholder="Regprice Here..">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="extprice" class="col-sm-2 col-form-label"><strong>Extend Price:</strong> </label>
+                            <div class="col-sm-10">
+                                <input type="number" name="extprice" class="form-control" id="extprice" placeholder="Tags Here..">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="msg" class="col-sm-2 col-form-label"><strong>Messages:</strong> </label>
+                            <div class="col-sm-10">
+                                <textarea name="msg" class="form-control" id="msg" placeholder="Messages Here.."></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                         <button type="submit" class="btn btn-primary"  value="submit">Submit</button>
                     </form>
                     <!-- Main charts -->
                     <div class="row">
-
                     </div>
                 </div>
 
